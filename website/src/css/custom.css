@@ -17,6 +17,38 @@
     margin-right: 0.5rem;
   }
 
+  :root {
+    --ifm-color-primary: #3e7afc;
+    --ifm-font-base-color: #021d3d;
+    --ifm-color-primary-dark: #3e7afc;
+    --ifm-color-primary-darker: #3345DF;
+    --ifm-color-primary-darkest: #3A2ABF;
+    --ifm-color-primary-light: #55AAFF;
+    --ifm-color-primary-lighter: #6DD3FF;
+    --ifm-color-primary-lightest: #86F3FF;
+    --ifm-code-font-size: 95%;
+    --ifm-global-radius: 0.4rem;
+    --ifm-heading-font-family: Sen, var(--ifm-font-family-base);
+    --ifm-font-family-base: Sen, -apple-system, BlinkMacSystemFont, sans-serif;
+    --ifm-navbar-background-color: var(--ifm-color-primary);
+    --ifm-navbar-link-color: white;
+    --ifm-navbar-link-hover-color: #eef4ff;
+    --ifm-footer-background-color: #3e7afc;
+    --ifm-color-primary-rgb: 40, 217, 242;
+    --ifm-footer-link-color: white;
+    --ifm-footer-link-hover-color: white;
+    --ifm-footer-title-color: white;
+    --ifm-footer-color: white;
+    --ifm-panel-background-color: var(--ifm-color-primary);
+    --ifm-panel-background-color-rgb: 255, 255, 255;
+    --ifm-panel-background-color-solid: #FFFFFF;
+    --ifm-panel-background-color-active: #eef4ff;
+    --ifm-panel-background-color-active-solid: #eef4ff;
+    --ifm-table-stripe-background: #fff;
+    --ifm-link-hover-decoration: none;
+    --ifm-link-color: #3755BE;
+}
+
  /*
 :root {
     --ifm-color-primary: #3e7afc;
@@ -149,14 +181,16 @@ footer .footer__link-item {
 */
 
  /* To be added for dark theme*/
-
  /*
 html[data-theme='dark'] footer__logo {
 }
+*/
 
 html[data-theme="dark"] {
+   --ifm-background-color: #242526;
+     
  }
-*/
+
 
 /*
 footer .container .text {
