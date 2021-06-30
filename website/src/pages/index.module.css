@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+ 
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -13,7 +14,7 @@
 }
 
 .heroBannerLogo {
-  max-width: 128px;
+  max-width: 350px;
 }
 
 @media screen and (max-width: 966px) {

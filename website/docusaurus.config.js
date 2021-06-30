@@ -1,63 +1,36 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// See Netlify env variables here: https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
-const isNetlify = process.env.NETLIFY === 'true';
-const isNetlifyDeployPreview =
-  isNetlify && process.env.CONTEXT === 'deploy-preview';
-
-// Deploy preview: we want to test the Infima RTL support!
-const i18n = isNetlifyDeployPreview
-  ? {
-      defaultLocale: 'LTR',
-      locales: ['LTR', 'RTL'],
-      localeConfigs: {
-        LTR: {
-          direction: 'ltr',
-        },
-        RTL: {
-          direction: 'rtl',
-        },
-      },
-    }
-  : undefined;
-
 module.exports = {
-  i18n,
-  title: 'Infima',
-  tagline: 'A modern styling framework for content-driven websites 🔥',
-  organizationName: 'facebookincubator',
-  projectName: 'infima',
+  title: 'DM-SV01',
+  tagline: 'OCP Server Support Site',
+  organizationName: 'pbco2003',
+  projectName: 'dm-sv01-docs',
   baseUrl: '/',
-  url: 'https://infima.dev',
-  favicon: 'img/logo.png',
+  url: 'https://www.datacom.wien',
+  favicon: 'img/favicon.ico',
   themeConfig: {
+    hideOnScroll: true,
+    algolia: {
+        apiKey: '9bfad31d9c97b28d4e5f0bfe57dbffaf',
+        indexName: 'axioms_developer'
+    },
     navbar: {
-      title: 'Infima',
+      title: '',
       logo: {
-        alt: 'Infima Logo',
-        src: 'img/logo.png',
+        alt: 'Datacom Logo',
+        src: 'img/datacom.svg',
       },
       items: [
         {
           to: 'docs/getting-started/introduction',
-          label: 'Docs',
+          label: 'DOCS',
           position: 'left',
         },
-        isNetlifyDeployPreview && {
-          to: 'pathname:///demo',
-          label: 'Demo',
-          position: 'left',
+        { to: 'blog', label: 'FAQ', position: 'left' },
+        {
+            href: 'https://www.datacom.wien/',
+            label: 'SITE',
+            position: 'left',
         },
-        isNetlifyDeployPreview && {
-          type: 'localeDropdown',
-          position: 'left',
-        },
-      ].filter(Boolean),
+      ],
     },
     footer: {
       style: 'dark',
@@ -66,54 +39,45 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Introduction',
+              label: 'Users Manual',
               to: 'docs/getting-started/introduction',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Site',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/infima',
+              label: 'Datacom Site',
+              href: 'https://www.datacom.wien',
             },
           ],
         },
-        {
-          title: 'Social',
+       {
+          title: 'Terms',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebookincubator/infima',
+              label: 'Help',
+              href: 'https://www.datacom.wien/support',
             },
           ],
-        },
-        {
-          title: 'Legal',
-          // Please do not remove the privacy and terms, it's a legal requirement.
-          items: [
-            {
-              label: 'Privacy',
-              href: 'https://opensource.facebook.com/legal/privacy/',
-              target: '_blank',
-              rel: 'noreferrer noopener',
-            },
-            {
-              label: 'Terms',
-              href: 'https://opensource.facebook.com/legal/terms/',
-              target: '_blank',
-              rel: 'noreferrer noopener',
-            },
-          ],
-        },
-      ],
-      logo: {
-        alt: 'Facebook Open Source Logo',
-        src: 'https://docusaurus.io/img/oss_logo.png',
-        href: 'https://opensource.facebook.com',
-      },
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
+       },
+       {
+        title: 'Contact',
+        items: [
+          {
+            label: 'Email',
+            href: 'mailto:suporte@datacom.com.br',
+          },
+        ],
+     },
+    ],
+//      logo: {
+//       alt: 'Datacom Electronics',
+//        src: 'img/datacom.svg',
+//        href: 'https://www.datacom.wien',
+//      },
+      copyright: `Copyright © ${new Date().getFullYear()} Datacom Electronics GmbH`,
     },
   },
   presets: [
@@ -124,7 +88,14 @@ module.exports = {
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
         },
-      },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+      },          
+    },
     ],
+  ],
+  stylesheets: [
+    'https://fonts.googleapis.com/css?family=Sen|Source+Code+Pro',
+    'https://at-ui.github.io/feather-font/css/iconfont.css'
   ],
 };
