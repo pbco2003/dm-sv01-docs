@@ -43,7 +43,7 @@ function Home() {
                 'button cta-btn button--outline button--primary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/sdks-samples/index')}>
+              to={useBaseUrl('blog/')}>
               <i className="feather icon-help-circle"></i> FAQ
             </Link>
           </div>
