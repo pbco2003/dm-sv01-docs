@@ -35,7 +35,7 @@ function Home() {
                 'button cta-btn button--outline button--primary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/intro')}>
+              to={useBaseUrl('docs/overview')}>
               <i className="feather icon-book-open"></i> Documentation
             </Link>
             <Link
