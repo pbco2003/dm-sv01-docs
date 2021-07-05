@@ -20,7 +20,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/intro',
+          to: 'docs/overview',
           label: 'DOCS',
           position: 'left',
         },
@@ -40,7 +40,7 @@ module.exports = {
           items: [
             {
               label: 'Users Manual',
-              to: 'docs/intro',
+              to: 'docs/overview',
             },
           ],
         },
