@@ -1,7 +1,8 @@
 ---
 sidebar_position: 1
-
+sidebar_label: 'Overview'
 ---
+
 ## System Overview
 
 DM-SV01 is a motherboard based on the next-generation AMD EPYC Infinity Fabric architecture for cloud server applications and compliant with Open Compute Platform (OCP). It resides on a single sled that can be plugged into an OCP Cubby chassis.
